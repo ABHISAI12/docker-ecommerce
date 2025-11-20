@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Docker / Database data (Prevent uploading your DB content)
+mongo-data/
+.DS_Store
+
+# OS generated files
+Thumbs.db

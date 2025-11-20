@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  # 1. Frontend Service
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+  # 2. Backend Service
+  backend:
+    build: ./backend
+    environment:
+      DB_URL: "mongodb://db:27017/ecommerce"
+    depends_on:
+      - db
+
+  # 3. Database Service
+  db:
+    image: mongo:latest
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

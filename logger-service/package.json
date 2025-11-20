@@ -1,0 +1,14 @@
+{
+  "name": "logger-service",
+  "version": "1.0.0",
+  "description": "Kafka consumer and API",
+  "main": "logger.js",
+  "scripts": {
+    "start": "node logger.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "kafkajs": "^2.2.4"
+  }
+}
